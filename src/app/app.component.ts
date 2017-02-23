@@ -13,12 +13,12 @@ import {TimerObservable} from "rxjs/observable/TimerObservable";
 export class AppComponent implements OnInit {
 
   @ViewChild('myAudio') testAudio;
-  @ViewChild('a') a;
-  @ViewChild('b') b;
-  @ViewChild('c') c;
-  @ViewChild('d') d;
-  @ViewChild('e') e;
-  @ViewChild('f') f;
+  @ViewChild('a') _a;
+  @ViewChild('b') _b;
+  @ViewChild('c') _c;
+  @ViewChild('d') _d;
+  @ViewChild('e') _e;
+  @ViewChild('f') _f;
   playList: any[];
   currentTrack: number;
 
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.testAudio.nativeElement.play();
-    let timer = TimerObservable.create(0, 5000);
+    let timer = TimerObservable.create(0, 3000);
     this.subscription = timer.subscribe(t => {
       this.createPlayList();
     });
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
   }
 
   play(status: any) {
-    status.audio.play();
+    status.audio.nativeElement.play();
   }
 
   playNext() {

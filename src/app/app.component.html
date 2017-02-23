@@ -5,7 +5,7 @@
 <audio #d src="assets/media/D.mp3" (ended)="playNext(currentTrack)"></audio>
 <audio #e src="assets/media/E.mp3" (ended)="playNext(currentTrack)"></audio>
 <audio #f src="assets/media/F.mp3" (ended)="playNext(currentTrack)"></audio>
-<button (click)="setStatus(0, 'A', 'red', a)">Status 0: A</button><button (click)="setStatus(0, 'B', 'blue', b)">Status 0: B</button>
-<button (click)="setStatus(1, 'C', 'red', c)">Status 1: C</button><button (click)="setStatus(1, 'D', 'blue', d)">Status 1: D</button>
-<button (click)="setStatus(2, 'E', 'red', e)">Status 2: E</button><button (click)="setStatus(2, 'F', 'blue', f)">Status 2: F</button>
+<button (click)="setStatus(0, 'A', 'red', _a)">Status 0: A</button><button (click)="setStatus(0, 'B', 'blue', _b)">Status 0: B</button>
+<button (click)="setStatus(1, 'C', 'red', _c)">Status 1: C</button><button (click)="setStatus(1, 'D', 'blue', _d)">Status 1: D</button>
+<button (click)="setStatus(2, 'E', 'red', _e)">Status 2: E</button><button (click)="setStatus(2, 'F', 'blue', _f)">Status 2: F</button>
 <app-status *ngFor="let status of statusService.statuses; let i = index"  index="{{i}}"></app-status>
