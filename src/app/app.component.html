@@ -9,3 +9,6 @@
 <button (click)="setStatus(1, 'C', 'red', _c)">Status 1: C</button><button (click)="setStatus(1, 'D', 'blue', _d)">Status 1: D</button>
 <button (click)="setStatus(2, 'E', 'red', _e)">Status 2: E</button><button (click)="setStatus(2, 'F', 'blue', _f)">Status 2: F</button>
 <app-status *ngFor="let status of statusService.statuses; let i = index"  index="{{i}}"></app-status>
+<br>
+<input #myRange type="range" min="0" max="1" step=".01" value=".5" (change)="setValue(myRange.value)"/> Value {{value}} Freq {{osc?.frequency.value}} Dur {{duration}}
+<button (click)="togglePlaying()">{{playing ? 'Stop' : 'Play'}}</button>
